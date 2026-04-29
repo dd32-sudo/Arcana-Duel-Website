@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcana Duel · Fate Awaits</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0b1428;
+            background-image: radial-gradient(circle at 30% 20%, #122e8a, #030814);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', 'Garamond', serif;
+            padding: 30px;
+        }
+        .main-card {
+            max-width: 1300px;
+            width: 100%;
+            background: rgba(18, 46, 138, 0.25);
+            backdrop-filter: blur(10px);
+            border: 2px solid #c9a030;
+            border-radius: 48px;
+            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.6);
+            padding: 30px 40px;
+            color: #f5efea;
+        }
+        .header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-bottom: 2px solid #c9a030;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .title-section h1 {
+            font-size: 3.8rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #f5efea;
+            text-shadow: 0 4px 12px black;
+            font-family: 'Garamond', 'Times New Roman', serif;
+        }
+        .title-section p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #f5efea;
+            margin-top: 6px;
+        }
+        .nav a {
+            background: transparent;
+            color: #f5efea;
+            text-decoration: none;
+            padding: 10px 24px;
+            margin-left: 20px;
+            border: 2px solid #c9a030;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.2s;
+        }
+        .nav a:hover {
+            background: #c9a030;
+            color: #122e8a;
+            box-shadow: 0 0 12px #c9a030;
+        }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            border-bottom: 1px dashed #c9a030;
+            padding-bottom: 8px;
+            margin: 30px 0 20px;
+            letter-spacing: 3px;
+            color: #f5efea;
+        }
+        .story {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 28px;
+            border-left: 6px solid #c9a030;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .battle-cards-list {
+            list-style: none;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 24px;
+            padding: 20px;
+        }
+        .battle-cards-list li {
+            margin: 14px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .battle-cards-list li::before {
+            content: "◆";
+            color: #c9a030;
+            font-size: 1.4rem;
+        }
+        .scene-list {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 24px;
+            padding: 20px;
+        }
+        .scene-list p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+        .tarot-grid {
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 28px;
+        }
+        .tarot-grid img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #c9a030;
+            box-shadow: 0 4px 0 #0a0a1a;
+            transition: transform 0.2s;
+        }
+        .tarot-grid img:hover {
+            transform: scale(1.05);
+            border-color: #f5efea;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #c9a030;
+            font-style: italic;
+            border-top: 1px solid #c9a03060;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-card">
+    <div class="header">
+        <div class="title-section">
+            <h1>ARCANA DUEL</h1>
+            <p>Where Fate Is Your Weapon</p>
+        </div>
+        <div class="nav">
+            <a href="index.html">HOME</a>
+            <a href="feedback.html">FEEDBACK</a>
+        </div>
+    </div>
+    <div class="story">
+        Long ago, the 22 Major Arcana were scattered across the mortal world. Two duelists gather, each holding six random cards from the same ancient deck. Through strategy, timing, and a touch of luck, they clash until one falls. The winner earns a gift from the cosmos — a single question answered by the tarot.
+    </div>
+    <h2>⚔️ Battle Cards (7 Types)</h2>
+    <div class="grid-2col">
+        <ul class="battle-cards-list">
+            <li><strong>The Sun</strong> — Deal 2 damage (strongest attack)</li>
+            <li><strong>Justice</strong> — Deal 1 damage (reliable strike)</li>
+            <li><strong>The Chariot</strong> — Gain 1 shield (blocks next hit)</li>
+            <li><strong>The Tower</strong> — Cancel opponent's card effect</li>
+        </ul>
+        <ul class="battle-cards-list">
+            <li><strong>Wheel of Fortune</strong> — Steal a random card from enemy</li>
+            <li><strong>The High Priestess</strong> — Opponent skips next turn</li>
+            <li><strong>Strength</strong> — Restore 2 HP (only healing card)</li>
+        </ul>
+    </div>
+    <h2>🎮 How to Play</h2>
+    <div class="grid-2col">
+        <div class="scene-list">
+            <p><strong>Pass-and-play</strong> — Two players share one screen. A cover screen hides the hand between turns.</p>
+            <p><strong>Rounds</strong> — Each round, first player picks up to 2 cards. Second player sees what was played and responds.</p>
+            <p><strong>Win Conditions</strong> — Reduce enemy HP to 0, or have more HP when cards run out.</p>
+            <p><strong>Special Combo</strong> — Play The Sun + Wheel of Fortune together once per game to restore 5 HP instead of normal effects.</p>
+        </div>
+        <div class="scene-list">
+            <p><strong>5 Game Scenes:</strong></p>
+            <p>🏠 Main Menu — Start, Rules, Quit<br>
+            ⚡ Battle — The card duel<br>
+            🏁 Game Over — Result and replay<br>
+            🔮 Divination — Winner draws from 22 Major Arcana<br>
+            📜 Rules — Detailed card effects and mechanics</p>
+        </div>
+    </div>
+    <h2>🃏 The 22 Major Arcana (Divination Deck)</h2>
+    <div class="tarot-grid" id="tarotGrid"></div>
+    <div class="footer">
+        ITE3715 — Multimedia Website and Application Design
+    </div>
+</div>
+<script>
+    (function() {
+        var grid = document.getElementById('tarotGrid');
+        if (!grid) return;
+        var extensions = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG'];
+        for (var i = 0; i < 22; i++) {
+            var img = document.createElement('img');
+            var num = i < 10 ? '0' + i : '' + i;
+            var base = 'tarot_' + num;
+            img.alt = 'Tarot ' + i;
+            img.style.width = '100%';
+            tryLoad(img, base, extensions, 0);
+            grid.appendChild(img);
+        }
+        function tryLoad(img, base, exts, idx) {
+            if (idx >= exts.length) {
+                img.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'140\' viewBox=\'0 0 100 140\'%3E%3Crect width=\'100\' height=\'140\' fill=\'%231a1a2e\'/%3E%3Ctext x=\'50\' y=\'75\' font-size=\'14\' fill=\'%23c9a030\' text-anchor=\'middle\' font-family=\'serif\'%3E?%3C/text%3E%3C/svg%3E';
+                return;
+            }
+            var test = new Image();
+            test.onload = function() { img.src = base + exts[idx]; };
+            test.onerror = function() { tryLoad(img, base, exts, idx + 1); };
+            test.src = base + exts[idx];
+        }
+    })();
+</script>
+</body>
+</html>
