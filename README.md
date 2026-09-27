@@ -1,6 +1,7 @@
 # Arcana-Duel-Website
 
 # Arcana Duel · Promotional Website
+https://dd32-sudo.github.io/Arcana-Duel-Website/
 
 A dark-fantasy themed promotional website for Arcana Duel, a two-player turn-based tarot card strategy game built with Unity 2D.
 
